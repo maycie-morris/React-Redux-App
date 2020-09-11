@@ -8,6 +8,7 @@ const initialState = {
 }
 
 function reducer(state = initialState, action) {
+    console.log('From Reducer', action)
     switch (action.type) {
         case FETCH_HEROES:
             return {

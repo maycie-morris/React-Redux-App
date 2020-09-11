@@ -3,7 +3,8 @@ import React from 'react';
 export const Hero = props => {
     return (
         <div className = "hero-container">
-            {props.hero.map(item => {
+            {console.log(props.hero)}
+            {/* {props.hero.map(item => {
                 return (
                     <div className="hero">
                         <h2 key={item._id} >Hero Name: {item.name} </h2>
@@ -15,7 +16,7 @@ export const Hero = props => {
                     </div>
                     </div>
                 )
-            })}
+            })} */}
         </div>
     )
 }

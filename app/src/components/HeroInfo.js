@@ -6,6 +6,7 @@ import { Hero } from './hero'
 
 
 export const HeroInfo = props => {
+    console.log("hero",props.hero)
     const dispatch = useDispatch()
 
     const getHeroes = e => {
@@ -22,14 +23,23 @@ export const HeroInfo = props => {
     )
 }
 
-function mapStateToProps(state) {
-    return (
-        {
-            hero: state.hero,
-            error: state.error
-        }
-    )
+const mapStateToProps = state => {
+   console.log('Hello!!', state)
+   return { 
+                   hero: state.hero,
+                   error: state.error
+               }
+            
 }
+
+// function mapStateToProps(state ){
+//     console.log(state.hero)
+//     return { 
+//             hero: state.hero,
+//             error: state.error
+//         }
+    
+// }
 
 
 export default connect(mapStateToProps, { fetchHeroes }) (HeroInfo)
